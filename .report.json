@@ -1,0 +1,21 @@
+{
+    "test_count": 4, 
+    "test_cases": [
+        {
+            "name": "Should create a new todo item", 
+            "passed": true
+        }, 
+        {
+            "name": "Should click the new todo and mark it as finished", 
+            "passed": true
+        }, 
+        {
+            "name": "Should show current todo count", 
+            "passed": true
+        }, 
+        {
+            "name": "Should remove the todo item", 
+            "passed": true
+        }
+    ]
+}
