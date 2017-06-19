@@ -17,6 +17,8 @@ module.exports = {
       "selenium_port": port,
       "launch_url": "http://localhost:5000",
       "silent": true,
+      "end_session_on_fail": false,
+      "skip_testcases_on_fail": false,
       "screenshots": {
         "enabled": true,
         "path": "reports"
