@@ -9,7 +9,7 @@ freeze_files:
     - src/helpers.js
     - src/template.js
     - test/specs/
-    - test/nightwatch.json
+    - test/nightwatch.conf.js
 report_files:
     - CHROME_57.0.2987.98_Linux_test.xml
 report_target: .report.json
