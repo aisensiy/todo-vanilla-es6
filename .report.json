@@ -10,11 +10,11 @@
             "passed": true
         }, 
         {
-            "name": "Should show current todo count", 
+            "name": "Should remove the todo item", 
             "passed": true
         }, 
         {
-            "name": "Should remove the todo item", 
+            "name": "Should show current todo count", 
             "passed": true
         }
     ]

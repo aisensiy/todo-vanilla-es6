@@ -1,4 +1,9 @@
-{
+var host = process.env.SELENIUM_HOST || 'localhost';
+var port = process.env.SELENIUM_PORT || 4444;
+console.log(host);
+console.log(port);
+
+module.exports = {
   "src_folders": [
     "specs"
   ],
@@ -8,8 +13,8 @@
   "globals_path": "",
   "test_settings": {
     "default": {
-      "selenium_host": "localhost",
-      "selenium_port": 4444,
+      "selenium_host": host,
+      "selenium_port": port,
       "launch_url": "http://localhost:5000",
       "silent": true,
       "screenshots": {
