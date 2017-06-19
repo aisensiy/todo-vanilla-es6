@@ -1,5 +1,7 @@
 依据已经提供的 `html` `css` 模板，完成一个 Todo 应用。
 
+![](screenshot.gif)
+
 # 前提
 
 完成这个项目你需要一些基本的 javascript 的知识：
@@ -43,12 +45,17 @@
 
 # 构建
 
+项目中提供了 `index.html` `src/app.js` `src/helpers.js` `src/template.js` 等几个文件。其中 `index.html` 提供了项目的基本 `html` 标签；`src/helpers.js` 提供了一些基本的帮助函数，比如查找 dom 元素、绑定 dom 事件；`src/template.js` 提供了 todo 元素以及 todo 列表的状态栏的模板。
+
 该项目包含如下几个功能：
 
-1. 创建一个新的 Todo
-2. 把已经创建的 Todo 标记为已经完成
-3. 删除一个 Todo
-4. 显示当前有多少个 Todo 还没有完成
+1. 创建一个新的 Todo，其模板在 `src/template.js` 中，当 todo 列表不为空时，显示下面的 `.main` 元素
+2. 把已经创建的 Todo 标记为已完成，需要将 `completed` 的类添加到 `.todo-list li` 元素上
+3. 删除一个 Todo，需要将 todo li 元素从 dom 节点中清除
+4. 显示当前有多少个 Todo 还没有完成，其模板在 `src/template.js` 中，请将其添加到 `.main footer .todo-count` 中
+
+**注意**，由于测试需要采用 css selector 定位元素并测试页面的交互，请严格按照以上的要求将指定的 class 添加到指定的元素上用以表现元素状态的变化而不是自己直接去写 style，并且一定使用 `src/template.js` 下的模板而不是自己写其他的模板，否则即使其效果与页面要求相似也会导致测试的失败。同时，请不要修改除去 `src/app.js` 文件外的其他文件，在测试时会覆盖其他文件的修改。
+
 
 # 在本地执行测试
 
