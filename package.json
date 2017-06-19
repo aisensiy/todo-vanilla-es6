@@ -6,6 +6,7 @@
     "serve": "node_modules/.bin/serve -s build"
   },
   "dependencies": {
+    "emojis-list": "^2.1.0",
     "serve": "^5.2.2",
     "todomvc-app-css": "^2.1.0"
   },
@@ -20,6 +21,7 @@
     "html-webpack-plugin": "^2.28.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
