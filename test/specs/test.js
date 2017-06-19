@@ -18,16 +18,18 @@ module.exports = {
             .assert.cssClassNotPresent('li[data-id]', 'completed');
     },
 
-    'Should show current todo count': function(browser) {
-        browser
-            .assert.containsText('footer .todo-count', '1');
-    },
-
     'Should remove the todo item': function(browser) {
         browser
             .assert.elementPresent('.todo-list li')
             .click('.todo-list li:first-child .destroy')
             .pause(500)
             .assert.elementNotPresent('.todo-list li');
+    },
+
+    'Should show current todo count': function(browser) {
+        browser
+            .setValue('input.new-todo', ['new todo', browser.Keys.ENTER])
+            .pause(500)
+            .assert.containsText('footer .todo-count', '1');
     }
 }
