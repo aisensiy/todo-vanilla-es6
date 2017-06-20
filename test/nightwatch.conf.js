@@ -1,7 +1,6 @@
 var host = process.env.SELENIUM_HOST || 'localhost';
 var port = process.env.SELENIUM_PORT || 4444;
-console.log(host);
-console.log(port);
+var endpoint = process.env.ENDPOINT || 'http://localhost:5000';
 
 module.exports = {
   "src_folders": [
@@ -15,13 +14,15 @@ module.exports = {
     "default": {
       "selenium_host": host,
       "selenium_port": port,
-      "launch_url": "http://localhost:5000",
+      "launch_url": endpoint,
       "silent": true,
       "end_session_on_fail": false,
       "skip_testcases_on_fail": false,
       "screenshots": {
         "enabled": true,
-        "path": "reports"
+        "path": "reports",
+        "on_failure": true,
+        "on_error": true
       },
       "desiredCapabilities": {
         "browserName": "chrome",
