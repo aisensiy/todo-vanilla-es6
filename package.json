@@ -3,7 +3,7 @@
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "start": "node_modules/.bin/webpack-dev-server --host=0.0.0.0 --port=5000",
-    "serve": "node_modules/.bin/serve -s build"
+    "serve": "node_modules/.bin/serve -s build --port=5000"
   },
   "dependencies": {
     "emojis-list": "^2.1.0",

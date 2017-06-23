@@ -1,6 +1,7 @@
 freeze_files:
     - package.json
     - package-lock.json
+    - yarn.lock
     - index.js
     - index.html
     - webpack.config.js

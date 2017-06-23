@@ -1,5 +1,5 @@
 {
-    "test_count": 4, 
+    "test_count": 5, 
     "test_cases": [
         {
             "name": "Should create a new todo item", 
@@ -15,6 +15,10 @@
         }, 
         {
             "name": "Should show current todo count", 
+            "passed": true
+        }, 
+        {
+            "name": "Should move first todo to next todo position", 
             "passed": true
         }
     ]

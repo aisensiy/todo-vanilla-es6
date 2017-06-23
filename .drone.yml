@@ -11,9 +11,11 @@ pipeline:
   build:
     image: node:6.10.2-alpine
     commands:
-      - npm install
-      - npm start &
-      - npm i nightwatch -g
+      - yarn global add nightwatch
+      - yarn install
+      - yarn run build
+      - yarn run serve &
+      - sleep 5
       - cd test && nightwatch
 
   report:
