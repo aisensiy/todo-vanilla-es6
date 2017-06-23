@@ -1,3 +1,5 @@
+var dragAndDrop = require('html-dnd').codeForSelectors;
+
 module.exports = {
     'Should create a new todo item': function(browser) {
         browser
@@ -31,5 +33,15 @@ module.exports = {
             .setValue('input.new-todo', ['new todo', browser.Keys.ENTER])
             .pause(500)
             .assert.containsText('footer .todo-count', '1');
+    },
+
+    'Should move first todo to next todo position': function(browser) {
+        browser
+            .setValue('input.new-todo', ['drag and drop', browser.Keys.ENTER])
+            .pause(500)
+            .execute(dragAndDrop, ['.todo-list li:first-child', '.todo-list li:nth-child(2)'])
+            .pause(500)
+            .assert.containsText('.todo-list li:nth-child(2)', 'new todo')
+            .end();
     }
 }

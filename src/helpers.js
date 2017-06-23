@@ -8,6 +8,36 @@ export function qs(selector, scope) {
 	return (scope || document).querySelector(selector);
 }
 
+export function closestParent(el, selector) {
+	let matchesFn;
+
+    // find vendor prefix
+    ['matches','webkitMatchesSelector','mozMatchesSelector','msMatchesSelector','oMatchesSelector'].some(function(fn) {
+        if (typeof document.body[fn] == 'function') {
+            matchesFn = fn;
+            return true;
+        }
+        return false;
+    })
+
+    let parent;
+
+    if (el[matchesFn](selector)) {
+        return el;
+    }
+
+    // traverse parents
+    while (el) {
+        parent = el.parentElement;
+        if (parent && parent[matchesFn](selector)) {
+            return parent;
+        }
+        el = parent;
+    }
+
+    return null;
+}
+
 export function qsAll(selector, scope) {
 	return (scope || document).querySelectorAll(selector);
 }
