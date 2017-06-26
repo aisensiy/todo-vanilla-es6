@@ -2,6 +2,8 @@
 
 ![](screenshot.gif)
 
+![](drag-and-drop.gif)
+
 # 任务
 
 该项目包含如下几个功能：
