@@ -2,8 +2,6 @@
 
 ![](screenshot.gif)
 
-![](drag-and-drop.gif)
-
 # 任务
 
 该项目包含如下几个功能：
@@ -12,7 +10,6 @@
 2. 把已经创建的 Todo 标记为已完成，需要将 `completed` 的类添加到 `.todo-list li` 元素上
 3. 删除一个 Todo，需要将包含一个 todo 的 `li` 元素从 dom 节点中清除
 4. 显示当前有多少个 Todo 还没有完成，其模板在 `src/template.js` 中，请将其添加到 `.main footer .todo-count` 中
-5. 采用 H5 的拖拽接口让 Todo 之间可以通过拖拽重新排序
 
 **注意** 项目中已经提供了 `index.html` `src/app.js` `src/helpers.js` `src/template.js` 等几个文件。其中：
 
@@ -47,7 +44,6 @@
    * 如何绑定鼠标单击事件
    * 如何绑定双击事件
    * DOM 的事件传播方式是什么样子的
-   * 理解 HTML5 新的拖拽 API，知道如何通过事件绑定方法让元素支持拖拽
 
 并且，你需要知道一些 `git` 的基本使用方式：
 
