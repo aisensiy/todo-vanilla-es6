@@ -12,6 +12,7 @@
 2. 把已经创建的 Todo 标记为已完成，需要将 `completed` 的类添加到 `.todo-list li` 元素上
 3. 删除一个 Todo，需要将包含一个 todo 的 `li` 元素从 dom 节点中清除
 4. 显示当前有多少个 Todo 还没有完成，其模板在 `src/template.js` 中，请将其添加到 `.main footer .todo-count` 中
+5. 采用 H5 的拖拽接口让 Todo 之间可以通过拖拽重新排序
 
 **注意** 项目中已经提供了 `index.html` `src/app.js` `src/helpers.js` `src/template.js` 等几个文件。其中：
 
@@ -46,6 +47,7 @@
    * 如何绑定鼠标单击事件
    * 如何绑定双击事件
    * DOM 的事件传播方式是什么样子的
+   * 理解 HTML5 新的拖拽 API，知道如何通过事件绑定方法让元素支持拖拽
 
 并且，你需要知道一些 `git` 的基本使用方式：
 
@@ -82,8 +84,18 @@ $ npm run start
 按照下面的步骤安装必要的工具：
 
 1. 安装 [node.js](https://nodejs.org/en/)
-2. 安装 [Selenium](http://nightwatchjs.org/gettingstarted#selenium-server-setup)
+2. 安装 [Selenium Server](http://nightwatchjs.org/gettingstarted#selenium-server-setup)
 2. 安装 [nightwatch](http://nightwatchjs.org/gettingstarted#installation)
+
+其中，`Selenium Server` 服务依赖 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 请首先安装它。你可以通过命令 `java -version` 确认其已经安装成功。
+
+在本地执行测试，首先需要启动 selenium:
+
+```
+$ java -jar selenium-server-standalone-{VERSION}.jar
+```
+
+有关 `Selenium Server` 的其他信息可以参见[这里](https://github.com/SeleniumHQ/selenium/wiki/RemoteWebDriverServer)。
 
 然后执行以下命令安装其他依赖
 
@@ -91,7 +103,7 @@ $ npm run start
 $ npm install
 ```
 
-在本地执行测试，首先需要启动 selenium，并使其端口为 `4444`，最后使用以下命令在本地执行测试
+最后使用以下命令在本地执行测试
 
 ```
 $ cd test
